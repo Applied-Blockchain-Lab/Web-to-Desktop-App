@@ -15,12 +15,18 @@
     "electron": "^21.2.0"
   },
   "scripts": {
-    "start": "electron-forge start",
+    "start": "electron-forge start --inspect-electron",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "install-app": "sh app-install.sh",
+    "remove-app": "sh app-remove.sh"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "electron-log": "^4.4.8",
     "electron-squirrel-startup": "^1.0.0",
-    "electron-window-state": "^5.0.3"
+    "electron-store": "^8.1.0",
+    "electron-window-state": "^5.0.3",
+    "jsonfile": "^6.1.0"
   }
 }

@@ -1,3 +1,5 @@
+const { APPDESCRIPTION, APPNAME } = require("./src/helpers/util");
+
 module.exports = {
   packagerConfig: {},
   rebuildConfig: {},
@@ -12,7 +14,11 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
+      config: {
+        name: "new-app",
+        productName: APPNAME,
+        description: APPDESCRIPTION
+      },
     }
   ],
 };

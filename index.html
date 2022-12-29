@@ -4,18 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <title>Google Drive</title>
-  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./src/css/base.css" />
 </head>
 
 <body>
   <div id="titlebar"></div>
   <div class="form">
     <label for="url">Enter site url</label><br>
-    <input type="text" id="url" name="url"><br>
-    <button id="btn" type="button">Set</button>
+    <input type="text" id="url" name="url" placeholder="Enter valid url" required><br>
+    <input type="text" id="name" name="name" maxlength="20" placeholder="Enter Application Name"><br>
+    <button id="urlBtn" type="button">Create Instance</button>
   </div>
+  <div id="loading"></div>
 
-  <script src='./src/renderer.js'></script>
+  <script src='./src/js/renderer.js'></script>
 </body>
 
 </html>
